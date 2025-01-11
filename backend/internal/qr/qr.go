@@ -1,11 +1,12 @@
 package qr
 
 import (
-	"fmt"
 	"image"
 	"log"
 
 	"github.com/skip2/go-qrcode"
+
+	logger "QuickTransfer/logger"
 )
 
 // RenderString as a QR code
@@ -14,7 +15,7 @@ func RenderString(s string, inverseColor bool) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(q.ToSmallString(inverseColor))
+	logger.Info(q.ToSmallString(inverseColor))
 }
 
 // RenderImage returns a QR code as an image.Image
