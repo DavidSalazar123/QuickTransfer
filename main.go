@@ -23,13 +23,12 @@ func main() {
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
-		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
+		BackgroundColour: &options.RGBA{R: 230, G: 242, B: 255, A: 255},
 		OnStartup:        app.startup,
 		Bind: []interface{}{
 			app,
 		},
 	})
-
 	if err != nil {
 		println("Error:", err.Error())
 	}
