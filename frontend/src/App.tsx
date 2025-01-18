@@ -1,13 +1,32 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [isSendActive, setIsSendActive] = useState<boolean>(false);
+
+  const handleSendClick = () => {
+    setIsSendActive(true);
+  };
+
+  const handleReceiveState = () => {
+    setIsSendActive(false);
+  };
+
   return (
-    <div className="min-h-screen bg-white grid grid-cols-1 place-items-center justify-items-center mx-auto py-8">
-      <div className="text-blue-900 text-2xl font-bold font-mono">
-        <h1 className="content-center">Vite + React + TS + Tailwind</h1>
-      </div>
-      <div className="w-fit max-w-md">
-        <a href="https://wails.io" target="_blank"></a>
+    <div className="h-screen flex items-center justify-center">
+      <div className="text-center space-y-4">
+        <button
+          onClick={handleSendClick}
+          className={`font-bold py-2 px-6 rounded ${isSendActive ? "bg-black text-white" : "bg-white text-black hover:bg-gray-100"}`}
+        >
+          Send
+        </button>
+        <button
+          onClick={handleReceiveState}
+          className={`font-bold py-2 px-6 rounded ${isSendActive ? "bg-white text-black hover:bg-gray-100" : "bg-black text-white"}`}
+        >
+          Receive
+        </button>
       </div>
     </div>
   );
