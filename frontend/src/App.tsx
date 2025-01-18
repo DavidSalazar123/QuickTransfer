@@ -1,18 +1,15 @@
-import React from "react";
-import HomePage from "./pages/HomePage";
-import SendPage from "./pages/SendPage";
-import ReceivePage from "./pages/ReceivePage";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
-    <HashRouter basename={"/"}>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/send" element={<SendPage />} />
-        <Route path="/receive" element={<ReceivePage />} />
-      </Routes>
-    </HashRouter>
+    <div className="min-h-screen bg-white grid grid-cols-1 place-items-center justify-items-center mx-auto py-8">
+      <div className="text-blue-900 text-2xl font-bold font-mono">
+        <h1 className="content-center">Vite + React + TS + Tailwind</h1>
+      </div>
+      <div className="w-fit max-w-md">
+        <a href="https://wails.io" target="_blank"></a>
+      </div>
+    </div>
   );
 }
 

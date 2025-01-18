@@ -5,9 +5,7 @@ go 1.21
 toolchain go1.22.7
 
 require (
-	github.com/jhoonb/archivex v0.0.0-20201016144719-6a343cdae81d
 	github.com/rs/zerolog v1.33.0
-	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	github.com/wailsapp/wails/v2 v2.9.2
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 )
